@@ -11,8 +11,7 @@ RUN apt-get update && apt-get install -y \
     libcairo2-dev \
     libxt-dev \
     libssl-dev \
-    libssh2-1-dev \
-    libssl1.0.0 
+    libssh2-1-dev
 
 # system library dependency for word cloud app
 RUN apt-get update && apt-get install -y \
@@ -22,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 RUN R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')"
 
 # install dependencies of word cloud app
-RUN R -e "install.packages(c('jiebaR','wordcloud2','dplyr','stringr','pacman','tidyverse') , repos='https://cloud.r-project.org/')"
+RUN R -e "install.packages(c('jiebaR','wordcloud2', 'htmlwidgets', 'dplyr', 'shinythemes', 'shinyjs', 'shinyBS', 'stringr', 'tidyverse') , repos='https://cloud.r-project.org/')"
 
 # copy the app to the image
 RUN mkdir /root/wordcloud
