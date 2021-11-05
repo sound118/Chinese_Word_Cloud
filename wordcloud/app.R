@@ -18,7 +18,7 @@ ui <- shinyUI(fluidPage(
   # shinythemes::themeSelector(),
   theme = shinytheme("superhero"),
   
-  titlePanel(title = div("Chinese Word Cloud Application", img(src="gc_logo.png", height=80, width=160, style = "float:right; padding-right:25px"))),
+  titlePanel(title = div("Chinese Word Cloud Application", img(src="vf-logo-vfc.png", height=80, width=160, style = "float:right; padding-right:25px"))),
   
   sidebarLayout(
     
